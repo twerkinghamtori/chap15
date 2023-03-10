@@ -42,7 +42,7 @@ public class MapEx3 {
 			String[] str = s.split(",");
 			String temp = "";
 			try {
-				temp=str[4]; //remark가 비어있는 경우
+				temp=str[4]; //remark가 비어있는 경우 ?? str[4]=temp 아닌가??
 			} catch(ArrayIndexOutOfBoundsException e) {
 				temp="";
 			}
