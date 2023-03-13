@@ -42,9 +42,9 @@ public class MapEx3 {
 			String[] str = s.split(",");
 			String temp = "";
 			try {
-				temp=str[4]; //remark가 비어있는 경우 ?? str[4]=temp 아닌가??
+				temp=str[4]; //remark내용을 temp에 저장.
 			} catch(ArrayIndexOutOfBoundsException e) {
-				temp="";
+				temp=""; //str[4]가 비어있으면 indexoutofbound오류 뜨니까 여기서 처리.
 			}
 			return new Car(Integer.parseInt(str[0]),Integer.parseInt(str[1]), str[2], Integer.parseInt(str[3]),temp);};
 			
