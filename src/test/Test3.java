@@ -53,13 +53,14 @@ public class Test3 {
 			String[] str = s.split(",");
 			String temp = "";
 			try {
-				temp=str[4]; //remark가 비어있는 경우
+				temp=str[4]; //remark내용을 temp에 저장.
 			} catch(ArrayIndexOutOfBoundsException e) {
-				temp="";
+				temp=""; //str[4]가 비어있으면 indexoutofbound오류 뜨니까 여기서 처리.
 			}
-			return new Car(Integer.parseInt(str[0]),Integer.parseInt(str[1]), str[2], Integer.parseInt(str[3]),temp);
+			return new Car(Integer.parseInt(str[0]),Integer.parseInt(str[1]), str[2], Integer.parseInt(str[3]), temp);
 		};
-		int sum = br.lines().map(f).filter(t->t.getCar().equals("그랜저")&&t.getMonth()==6).peek(s->System.out.println(s+",")).mapToInt(t->t.getQty()).sum();
+		int sum = br.lines().map(f).filter(t->t.getCar().equals("그랜저")&&t.getMonth()==6 && t.getCon()==2).peek(s->System.out.println(s+","))
+				  .mapToInt(t->t.getQty()).sum();
 		System.out.println("합계: " + sum);
 	}
 }
