@@ -12,7 +12,7 @@ public class GeneratorProductFile {
 		int limit=0, con=0;
 		fos = new FileOutputStream("product.txt");
 		PrintStream ps = new PrintStream(fos);
-		while(limit++ < 1000) {
+		while(limit++ < 100) {
 			ps.print((int)(Math.random()*12+1) + ","); //월
 			con = (int)(Math.random()*3+1); //1.생산, 2.판매, 3.반품
 			ps.print(con + ",");
